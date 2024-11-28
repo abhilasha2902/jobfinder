@@ -1,0 +1,81 @@
+#logo {
+  height: 40px;
+  width: 155px;
+}
+.navbar {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
+  background-color: #000000;
+  border-style: solid;
+  border-top-style: none;
+  border-left-style: none;
+  border-right-style: none;
+  position: sticky;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  color: orangered;
+}
+
+.navbar a:hover {
+  color: #04aa6d;
+  /* text-decoration: underline; */
+  text-underline-offset: 10px;
+}
+
+.navbar a.active {
+  color: #04aa6d;
+  text-underline-offset: 10px;
+  text-decoration: underline;
+}
+
+.navbar .icon {
+  display: none;
+}
+
+#login {
+  float: inline-end;
+}
+
+@media screen and (max-width: 900px) {
+  .navbar a:not(:first-child) {
+    display: none;
+  }
+
+  .navbar a.icon {
+    float: right;
+    display: block;
+  }
+  #login {
+    float: left;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .navbar.responsive {
+    position: relative;
+  }
+
+  .navbar.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
